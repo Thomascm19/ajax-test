@@ -1,0 +1,111 @@
+﻿@model IEnumerable<ajax_test.Conductor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div ng-app="conductores" ng-controller="conductorescontroller"></div>
+    <div class="row">
+        <div class="col" s6>
+            <h2>Conductores</h2>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Cedula
+                </th>
+                <th>
+                    Telefono
+                </th>
+
+            </tr>
+            
+            <tr ng-repeat="conductor in lista">
+
+                <td>
+                    {{conductor.Nombre}}
+                </td>
+                <td>
+                    angular
+                </td>
+                <td>
+                    angular
+                </td>
+                <td>
+                    angular
+                </td>
+                <td>
+                    angular
+                </td>
+            </tr>
+        </table>
+    </div>
+        <!--=====================================
+        Lista por defecto
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Direccion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cedula)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Direccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cedula)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Conductor }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Conductor }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Conductor })
+                    </td>
+                </tr>
+            }
+
+        </table>
+                ======================================-->
+</body>
+</html>

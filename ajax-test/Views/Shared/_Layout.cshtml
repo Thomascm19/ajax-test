@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/main.css">
+    <link href="~/materialize/css/materialize.min.css" rel="stylesheet">
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-sanitize.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <div id="cabezote">
+            <!--=====================================
+            Img inicio
+            ======================================-->
+            <img src="~/img/taxi.png">
+            <!--=====================================
+            Ingreso
+            ======================================-->
+            <div id="log" class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">Nombre de usuario</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col 12">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Contraseña</label>
+                        </div>
+                    </div>
+                    <div id="boton">
+
+                        @Html.ActionLink("Agregar", "Create", "Conductors",new { @class="btn waves-effect waves-light" })
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div id="pie">
+                <a>Contactanos</a>
+
+                <p>Direccion: Manizales Cr 17 A #4B-48</p>
+
+                <p id="tel">Telefono: 3145481117</p>
+
+            </div>
+
+
+
+
+        </footer>
+
+
+    </div>
+    <script src="~/materialize/js/materialize.min.js"></script>
+</body>
+</html>
