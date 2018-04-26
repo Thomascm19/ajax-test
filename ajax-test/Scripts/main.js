@@ -3,7 +3,7 @@
 conductores.factory("listaconductores", function ($http) {
     var factoria = {};
     factoria.listaconductores = function () {
-        return $http.get("http://localhost:52033/Conductors/Index");
+        return $http.get("http://localhost:52033/Conductors/listaconductores");
     }
     return factoria;
 });
