@@ -20,14 +20,16 @@ namespace ajax_test.Controllers
             return View(db.Conductor.ToList());
         }
         // Ajax
-        public ActionResult Listaconductores()
+        public String Listaconductores()
         {
-            Entities db = new Entities();
-            var data = db.Conductor.ToList();
+            
+            var data = db.Conductor;
 
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(data);
 
-            return Json(data, JsonRequestBehavior.AllowGet);
+            return json;
         }
+        
         // GET: Conductors/Details/5
         public ActionResult Details(int? id)
         {
