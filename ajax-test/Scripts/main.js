@@ -8,10 +8,10 @@ conductores.factory("listaconductores", function ($http) {
     return factoria;
 });
   
-conductores.controller("listaconductores", function ($scope, listaconductores) {
-    listaconductores.listarconductores().success(function (datos) {
+conductores.controller("conductorescontroller", function ($scope, listaconductores) {
+    listaconductores.listaconductores().success(function (datos) {
         $scope.listaconductores = datos
-
+        
     });
 });
 
