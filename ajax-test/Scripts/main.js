@@ -15,3 +15,21 @@ conductores.controller("conductorescontroller", function ($scope, listaconductor
     });
 });
 
+
+
+var usuarios = angular.module('usuarios', ["ngSanitize"]);
+
+usuarios.factory("listausuarios", function ($http) {
+    var factoria = {};
+    factoria.listausuarios = function () {
+        return $http.get("http://localhost:52033/Usuarios/listausuarios");
+    }
+    return factoria;
+});
+
+usuarios.controller("usuarioscontroller", function ($scope, listausuarios) {
+    listausuarios.listausuarios().success(function (datos) {
+        $scope.listausuarios = datos
+
+    });
+});

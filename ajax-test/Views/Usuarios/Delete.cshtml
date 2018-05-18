@@ -1,8 +1,9 @@
 ﻿@model ajax_test.Usuario
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
+
 
 <!DOCTYPE html>
 
@@ -20,48 +21,49 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Nombre)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Nombre)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Apellido)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Apellido)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Direccion)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Direccion)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Email)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Email)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Telefono)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Telefono)
             </dd>
-    
+
         </dl>
-    
-        @using (Html.BeginForm()) {
+
+        @using (Html.BeginForm())
+        {
             @Html.AntiForgeryToken()
-    
+
             <div class="form-actions no-color">
                 <input type="submit" value="Delete" class="btn btn-default" /> |
                 @Html.ActionLink("Back to List", "Index")

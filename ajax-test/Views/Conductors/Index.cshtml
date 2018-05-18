@@ -11,6 +11,9 @@
     <title></title>
 </head>
 <body>
+    <div id="caja1">
+        <a href="@Url.Action("Create", "Conductors")"><i id="agregar" class="material-icons">person_add</i></a>
+    </div>
     <div ng-app="conductores" ng-controller="conductorescontroller">
         <div class="row">
             <div class="col" s6>
@@ -57,56 +60,56 @@
             </table>
         </div>
     </div>
-        <!--=====================================
-        Lista por defecto
+    <!--=====================================
+    Lista por defecto
 
-        <table class="table">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nombre)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Apellido)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Direccion)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Cedula)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Telefono)
-                </th>
-                <th></th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Conductor }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Conductor }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Conductor })
+                </td>
             </tr>
+        }
 
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nombre)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Apellido)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Direccion)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Cedula)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Telefono)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Conductor }) |
-                        @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Conductor }) |
-                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Conductor })
-                    </td>
-                </tr>
-            }
-
-        </table>
-                ======================================-->
+    </table>
+            ======================================-->
 </body>
 </html>

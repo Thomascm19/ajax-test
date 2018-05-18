@@ -19,6 +19,16 @@ namespace ajax_test.Controllers
         {
             return View(db.Usuario.ToList());
         }
+        // Ajax
+        public String Listausuarios()
+        {
+
+            var data = db.Usuario;
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(data);
+
+            return json;
+        }
 
         // GET: Usuarios/Details/5
         public ActionResult Details(int? id)

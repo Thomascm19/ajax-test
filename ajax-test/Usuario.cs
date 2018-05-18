@@ -9,6 +9,7 @@
 
 namespace ajax_test
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -20,5 +21,8 @@ namespace ajax_test
         public string Direccion { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
+
+        [JsonIgnore]
+        public virtual Usuario usuario { get; set; }
     }
 }
