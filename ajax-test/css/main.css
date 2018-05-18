@@ -27,3 +27,33 @@ footer {
     float: right;
 }
 
+#contenedor {
+    display: inline-block;
+    height: 480px;
+    text-align: center;
+    font-family: 'Skranji', cursive;
+}
+#cajas {
+    height: 390px;
+    text-align: center;
+}
+#caja1 {
+    position: relative;
+   top:50px;
+}
+#caja2 {
+    position: relative;
+    top: -170px;
+    right: -590px;
+}
+.iconos {
+    text-align: center;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #999;
+    padding: 10%;
+    width: 325px;
+    height: 220px;
+    font-size: 40px;
+}
