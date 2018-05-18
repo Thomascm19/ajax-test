@@ -26,5 +26,6 @@ namespace ajax_test
         }
     
         public virtual DbSet<Conductor> Conductor { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

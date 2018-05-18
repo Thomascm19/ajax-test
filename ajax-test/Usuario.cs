@@ -12,13 +12,13 @@ namespace ajax_test
     using System;
     using System.Collections.Generic;
     
-    public partial class Conductor
+    public partial class Usuario
     {
-        public int Codigo_Conductor { get; set; }
+        public int Codigo_Usuario { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Direccion { get; set; }
-        public Nullable<int> Cedula { get; set; }
-        public Nullable<int> Telefono { get; set; }
+        public string Email { get; set; }
+        public string Telefono { get; set; }
     }
 }
